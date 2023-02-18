@@ -73,13 +73,27 @@
 #     print(_)
 #     break
 
-def count_up_to(x):
-    count = 1
-    while count <= x:
-        yield count
-        count += 1
-counter = count_up_to(10)
-print(counter.__next__())
-print(counter.__next__())
-print(counter.__next__())
-print(list(counter))
+# def count_up_to(x):
+#     count = 1
+#     while count <= x:
+#         yield count
+#         count += 1
+# counter = count_up_to(10)
+# print(counter.__next__())
+# print(counter.__next__())
+# print(counter.__next__())
+# print(list(counter))
+
+# |---------------------------------------------------2.0--------------------------------------------------------------|
+
+def my_for(iterable):
+    iterator = iterable.__iter__()
+    while True:
+        try:
+            print(iterator.__next__(), end=' ')
+        except StopIteration:
+            break
+my_for([1, 2, 3])
+print()
+for i in [1, 2, 3]:
+    print(i, end=' ')
