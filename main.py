@@ -78,6 +78,8 @@ def count_up_to(x):
     while count <= x:
         yield count
         count += 1
-count = count_up_to(10)
-print(count.__next__())
-print(count.__next__())
+counter = count_up_to(10)
+print(counter.__next__())
+print(counter.__next__())
+print(counter.__next__())
+print(list(counter))
