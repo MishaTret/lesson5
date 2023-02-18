@@ -59,17 +59,25 @@
 
 # |---------------------------------------------------2.0--------------------------------------------------------------|
 
-def raise_of_the_degrees(number, max_degrees):
-    i=0
-    for _ in range(max_degrees):
-        yield number**i
-        i += 1
-result = raise_of_the_degrees(1220155, 500)
-print(result)
-print(result.__next__())
-print(result.__next__())
+# def raise_of_the_degrees(number, max_degrees):
+#     i=0
+#     for _ in range(max_degrees):
+#         yield number**i
+#         i += 1
+# result = raise_of_the_degrees(1220155, 500)
+# print(result)
+# print(result.__next__())
+# print(result.__next__())
+#
+# for _ in result:
+#     print(_)
+#     break
 
-for _ in result:
-    print(_)
-    break
-
+def count_up_to(x):
+    count = 1
+    while count <= x:
+        yield count
+        count += 1
+count = count_up_to(10)
+print(count.__next__())
+print(count.__next__())
